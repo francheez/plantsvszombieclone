@@ -21,16 +21,15 @@ int Game::init(const char* title, const int w, const int h) {
 }
 
 void Game::define() {
-    stone_texture = texture_manager::load(rend, "assets/textures/stone.png");
-    light_grass_texture = texture_manager::load(rend, "assets/textures/light_grass.png");
-    dark_grass_texture = texture_manager::load(rend, "assets/textures/dark_grass.png");
-    left_fence_texture = texture_manager::load(rend, "assets/textures/left_fence.png");
-    fence_texture = texture_manager::load(rend, "assets/textures/central_fence.png");
-    right_fence_texture = texture_manager::load(rend, "assets/textures/right_fence.png");
-
+    // stone_texture = texture_manager::load(rend, "assets/textures/stone.png");
+    // light_grass_texture = texture_manager::load(rend, "assets/textures/light_grass.png");
+    // dark_grass_texture = texture_manager::load(rend, "assets/textures/dark_grass.png");
+    // left_fence_texture = texture_manager::load(rend, "assets/textures/left_fence.png");
+    // fence_texture = texture_manager::load(rend, "assets/textures/central_fence.png");
+    // right_fence_texture = texture_manager::load(rend, "assets/textures/right_fence.png");
+    
     rect1 = {0, 0, TILE_SIZE, TILE_SIZE};
-    rect2 = {0, TILE_SIZE, TILE_SIZE, TILE_SIZE};
-}
+} 
 
 void Game::run() {
     while(running) {
@@ -53,7 +52,7 @@ void Game::draw() {
     SDL_RenderClear(rend);
 
     SDL_RenderCopy(rend, stone_texture, NULL, &rect1);
-    SDL_RenderCopy(rend, light_grass_texture, NULL, &rect2);
+    SDL_RenderCopy(rend, light_grass_texture, NULL, &rect1);
 
     SDL_RenderPresent(rend);
 }
