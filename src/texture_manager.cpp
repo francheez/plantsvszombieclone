@@ -1,5 +1,4 @@
 #include "../include/texture_manager.h"
-#include "texture_manager.h"
 
 TextureManager::TextureManager(SDL_Renderer* rend) {
     this->rend = rend;
